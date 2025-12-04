@@ -11,7 +11,7 @@ setTimeout(function () {
 // ===============================
 let lis = document.querySelectorAll(".nav-list li");
 lis.forEach((li) => {
-  li.addEventListener("click", () => {
+  li.addEventListener("click", (e) => {
     lis.forEach((li) => {
       li.classList.remove("active");
     });
@@ -54,3 +54,4 @@ function typing() {
 window.onload = () => {
   typing();
 };
+// ===============================

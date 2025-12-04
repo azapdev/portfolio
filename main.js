@@ -5,6 +5,12 @@ tailwind.config = {
         danger: "#be2600ff",
         "black-glass": "#0000008e",
         "ghost-white": "#F9FAFB",
+        "footer-bg": "#000000e8",
+        "icon-bg": "#272626d4",
+        "sec-title":"#f9fafb8a"
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
       },
       keyframes: {
         logotranslate: {

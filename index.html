@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+CZ:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-… (hash) …"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="bg-ghost-white">
+  <body class="bg-ghost-white font-roboto">
     <!-- PRELOADER -->
     <div
-      class="preloader size-full bg-black top-0 fixed z-50 flex justify-center items-center animate-preloader-animation"
+      class="preloader size-full bg-black top-0 fixed z-50 flex flex-col justify-center items-center animate-preloader-animation"
     >
       <img src="./img/logo.png" class="size-96" id="preloader" />
     </div>
@@ -39,24 +46,24 @@
       <nav class="text-white">
         <ul class="nav-list list-none flex gap-4">
           <li
-            class=" active font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
+            class="active font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
           >
-            About
+            <a href="#about">About</a>
           </li>
           <li
             class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
           >
-            Skills
+            <a href="#skills">Skills</a>
           </li>
           <li
             class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
           >
-            Works
+            <a href="">Works</a>
           </li>
           <li
             class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
           >
-            Contact
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -64,8 +71,10 @@
 
     <!-- MAIN SECTION -->
     <main>
+      <!-- ABOUT AREA -->
       <section
-        class="grid grid-cols-1 lg:grid-cols-[60%_40%] px-8 items-center h-[calc(100vh-80px)] min-h-96 max-w-5xl mx-auto z-0"
+        class="grid grid-cols-1 lg:grid-cols-[60%_40%] px-8 items-center lg:h-[calc(100vh-80px)] min-h-96 max-w-5xl mx-auto z-0"
+        id="about"
       >
         <!-- TITLE -->
         <div
@@ -88,7 +97,167 @@
           class="w-full max-w-lg mx-auto order-first lg:order-last animate-logotranslate"
         />
       </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="max-w-4xl lg:max-w-6xl mx-auto py-8 px-8 bg-black-glass"
+      >
+        <div id="info" class="py-4">
+          <!-- info -->
+          <div
+            class="title grid grid-cols-1 lg:grid-cols-[70%_30%] gap-5 items-start"
+          >
+            <div class="left">
+              <!-- information -->
+              <div>
+                <h1 class="text-6xl text-danger font-bold flex items-center">
+                  <span class="bg-white mx-4 text-white rounded-2xl text-5l"
+                    >|</span
+                  >About Me
+                </h1>
+
+                <p class="text-sec-title px-9 py-4">
+                  I'm a software engineer with {?} of experience in Front-End
+                  development. I have experience with modern web technologies,
+                  so I can build the required software in a professional way
+                  with clean and reusable code.
+                </p>
+              </div>
+              <!-- skills -->
+              <div id="tec ">
+                <p class="text-white text-3xl font-bold mx-2">
+                  <span class="bg-white mx-3 text-white rounded-2xl text-5l"
+                    >|</span
+                  ><span class="text-danger">Skills</span> & Technologies
+                </p>
+                <!-- addvantage -->
+                <div
+                  class="container max-w-xl py-5 mx-8 grid grid-cols-2 lg:grid-cols-2 gap-3 mt-8"
+                >
+                  <a
+                    href=""
+                    class="flex items-center group-hover:brightness-200"
+                    ><i
+                      class="fa-brands fa-html5 text-white text-lg brightness-50 group"
+                    ></i>
+                    <span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >Html</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-css3-alt text-white text-lg brightness-50"
+                    ></i>
+                    <span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >CSS</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-sass text-white text-lg brightness-50"
+                    ></i
+                    ><span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >SCSS</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-js text-white text-lg brightness-50"
+                    ></i>
+                    <span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >JS</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-bootstrap text-white text-lg brightness-50"
+                    ></i
+                    ><span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >BootStrap</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-css3 text-white text-lg brightness-50"
+                    ></i
+                    ><span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >Tailwindcss</span
+                    ></a
+                  >
+                  <a href="" class="flex items-center"
+                    ><i
+                      class="fa-brands fa-github text-white text-lg brightness-50"
+                    ></i
+                    ><span
+                      class="text-white mx-2 text-md brightness-50 font-bold tracking-[1.5px] hover:text-danger hover:brightness-125 transition duration-200"
+                      >Githup</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- img -->
+            <div
+              class="flex justify-center items-center order-first lg:order-1"
+            >
+              <img
+                src="./img/WhatsApp Image 2025-12-04 at 3.04.14 PM.jpeg"
+                alt=""
+                class="w-[200px] rounded-2xl flex justify-center"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- footer -->
+    <footer id="contact">
+      <section class="h-35 flex flex-col items-center bg-footer-bg py-4">
+        >
+        <img
+          src="./img/logo.png"
+          alt=""
+          class="size-24 object-contain brightness-50 hover:brightness-100 transition duration-300 cursor-pointer"
+        />
+        <div class="links flex justify-center gap-3">
+          <a href="https://www.instagram.com/azapdev/" target="_blank">
+            <i
+              class="fa-brands fa-instagram text-xl text-white brightness-50 bg-icon-bg rounded-full w-10 h-10 flex justify-center items-center hover:brightness-100 hover:text-danger hover:bg-black transition duration-150"
+            ></i
+          ></a>
+          <a href="https://www.facebook.com/azapdev" target="_blank">
+            <i
+              class="fa-brands fa-facebook text-xl text-white brightness-50 bg-icon-bg rounded-2xl w-10 h-10 flex justify-center items-center hover:brightness-100 hover:text-danger hover:bg-black transition duration-150"
+            ></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ahmed-elazap-5a85b2377/"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-linkedin text-xl text-white brightness-50 bg-icon-bg rounded-2xl w-10 h-10 flex justify-center items-center hover:brightness-100 hover:text-danger hover:bg-black transition duration-150"
+            ></i
+          ></a>
+          <a href="">
+            <i
+              class="fa-brands fa-whatsapp text-xl text-white brightness-50 bg-icon-bg rounded-2xl w-10 h-10 flex justify-center items-center hover:brightness-100 hover:text-danger hover:bg-black transition duration-150"
+            ></i
+          ></a>
+          <a href="">
+            <i
+              class="fa-brands fa-google text-xl text-white brightness-50 bg-icon-bg rounded-2xl w-10 h-10 flex justify-center items-center hover:brightness-100 hover:text-danger hover:bg-black transition duration-150"
+            ></i
+          ></a>
+        </div>
+      </section>
+    </footer>
     <script src="./main.js"></script>
     <script src="./logic.js"></script>
   </body>
