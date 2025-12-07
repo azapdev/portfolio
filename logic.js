@@ -4,7 +4,7 @@
 let preloader = document.querySelector(".preloader");
 setTimeout(function () {
   preloader.style.display = "none";
-}, 3000);
+}, 80);
 
 // ===============================
 // nav-list-toggle
