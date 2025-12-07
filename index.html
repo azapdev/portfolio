@@ -29,48 +29,49 @@
   <body class="bg-ghost-white font-roboto max-w-screen">
     <!-- PRELOADER -->
     <div
-      class="preloader size-full bg-black top-0 fixed z-50 flex flex-col justify-center items-center animate-preloader-animation"
+      class="preloader bg-black h-screen w-full top-0 fixed z-50 flex flex-col justify-center items-center animate-preloader-animation object-contain"
     >
       <img
         src="https://azapdev.github.io/portfolio/img/logo.png"
-        class="size-96"
+        class="w-60 md:w-96 h-auto object-contain"
+        alt="preloader"
         id="preloader"
       />
     </div>
 
     <!-- HEADER -->
     <header
-      class="bg-black py-2 flex justify-between items-center flex-col md:flex-row px-8 sticky top-0 w-full max-w-6xl mx-auto z-40"
+      class="bg-black/60 py-4 md:py-0 flex justify-between items-center flex-col md:flex-row px-8 sticky top-0 w-full max-w-6xl mx-auto z-40"
     >
       <!-- LOGO -->
-      <div class="size-24 cursor-pointer">
+      <div class="cursor-pointer hidden md:block">
         <img
           src="./img/logo.png"
           alt=""
-          class="brightness-200 object-contain transition duration-500 hover:brightness-50"
+          class="brightness-200 object-contain transition duration-500 hover:brightness-50 md:size-20"
         />
       </div>
 
       <!-- nav area -->
       <nav class="text-white">
-        <ul class="nav-list list-none flex gap-4 flex-wrap ">
+        <ul class="nav-list list-none flex gap-4">
           <li
-            class="active font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
+            class="active font-bold text-xs md:text-sm hover:text-danger cursor-pointer transition-colors duration-200"
           >
             <a href="#about">About</a>
           </li>
           <li
-            class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
+            class="font-bold text-xs md:text-sm hover:text-danger cursor-pointer transition-colors duration-200"
           >
             <a href="#skills">Skills</a>
           </li>
           <li
-            class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
+            class="font-bold text-xs md:text-sm hover:text-danger cursor-pointer transition-colors duration-200"
           >
             <a href="">Works</a>
           </li>
           <li
-            class="font-bold text-[18px] hover:text-danger cursor-pointer transition-colors duration-200 p-3 border border-black hover:border-danger rounded-full"
+            class="font-bold text-xs md:text-sm hover:text-danger cursor-pointer transition-colors duration-200"
           >
             <a href="#contact">Contact</a>
           </li>
@@ -82,7 +83,7 @@
     <main>
       <!-- ABOUT AREA -->
       <section
-        class="grid grid-cols-1 lg:grid-cols-[60%_45%] px-1 md:px-8 items-start justify-center lg:h-[calc(100vh-80px)] min-h-96 w-screen md:max-w-5xl md:items-center mx-auto z-0"
+        class="grid grid-cols-1 lg:grid-cols-[60%_45%] px-1 md:px-8 items-start justify-center lg:h-[calc(100vh-80px)] min-h-96 md:max-w-5xl md:items-center mx-auto z-0"
         id="about"
       >
         <!-- TITLE -->
@@ -106,14 +107,14 @@
         <img
           src="./img/logo.png"
           alt=""
-          class="mx-auto max-w-sm order-first lg:order-last lg:max-w-lg animate-logotranslate"
+          class="mx-auto order-first lg:order-last animate-logotranslate w-full object-contain"
         />
       </section>
 
       <!-- SKILLS -->
       <section
         id="skills"
-        class="max-w-4xl lg:max-w-6xl mx-auto md:p-8 p-1 bg-black-glass"
+        class="max-w-4xl lg:max-w-6xl mx-auto md:p-8 p-4 md:p-8 bg-black/60 mb-8"
       >
         <!-- parentsec -->
         <div
@@ -123,42 +124,37 @@
             <!-- About me area -->
             <div>
               <h1
-                class="md:text-6xl text-4xl text-danger font-bold flex items-center"
+                class="md:text-6xl text-4xl text-danger font-bold flex items-center gap-2"
               >
                 <span
-                  class="bg-white mx-4 text-white rounded-2xl text-3xl md:text-5xl"
-                  >|</span
-                >About Me
+                  class="bg-white text-white rounded-2xl text-lg md:text-4xl">|</span>
+                <span>About Me</span>
               </h1>
 
               <p class="text-sec-title px-9 py-4">
-                I'm a software engineer with {?} of experience in Front-End
-                development. I have experience with modern web technologies, so
-                I can build the required software in a professional way with
-                clean and reusable code.
+                I'm a software engineer with 1 year of experience in Front-End
+                development.
               </p>
             </div>
 
             <!-- skills -->
-            <div id="tec ">
-              <p
-                class="text-white text-xl md:text-3xl font-bold mx-2 flex items-center"
+            <div id="tec">
+              <h3
+                class="text-white text-xl md:text-3xl font-bold flex items-center gap-2"
               >
                 <span
-                  class="bg-white mx-3 text-white rounded-2xl text-lg md:text-5xl"
+                  class="bg-white text-white rounded-2xl text-xl md:text-3xl"
                   >|</span
                 ><span class="text-danger text-xl md:text-3xl"
                   >Skills&nbsp; </span
                 >& Technologies
-              </p>
-              <!-- addvantage -->
-              <div
-                class="container mx-8 grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8"
-              >
+              </h3>
+              <!-- advantage -->
+              <div class="container grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                 <!-- HTML -->
                 <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-html5 text-white size-6 brightness-50 group-hover:brightness-125 transition duration-150"
+                    class="fa-brands fa-html5 text-white size-4 brightness-50 group-hover:brightness-125 transition duration-150"
                   ></i>
                   <span
                     class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
@@ -169,7 +165,7 @@
                 <!-- CSS -->
                 <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-css3-alt text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-css3-alt text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i>
                   <span
                     class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
@@ -180,7 +176,7 @@
                 <!-- SCSS -->
                 <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-sass text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-sass text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i
                   ><span
                     class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
@@ -189,45 +185,45 @@
                 >
 
                 <!-- JS -->
-                <a href="" class="flex items-center w-fit group"
+                <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-js text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-js text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i>
                   <span
-                    class="text-white mx-2 text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
+                    class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
                     >Javascript</span
                   ></a
                 >
 
                 <!-- BOOTSTRAP -->
-                <a href="" class="flex items-center w-fit group"
+                <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-bootstrap text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-bootstrap text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i
                   ><span
-                    class="text-white mx-2 text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
+                    class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
                     >Bootstrap</span
                   ></a
                 >
 
                 <!-- TAILWIND -->
-                <a href="" class="flex items-center w-fit group"
+                <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-css3 text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-css3 text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i
                   ><span
-                    class="text-white mx-2 text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
+                    class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
                     >TailwindCSS</span
                   ></a
                 >
 
                 <!-- GITHUP -->
-                <a href="" class="flex items-center w-fit group"
+                <a href="" class="flex items-center w-fit group gap-2"
                   ><i
-                    class="fa-brands fa-github text-white size-6 brightness-50 group-hover:brightness-125 transition duration-200"
+                    class="fa-brands fa-github text-white size-4 brightness-50 group-hover:brightness-125 transition duration-200"
                   ></i
                   ><span
-                    class="text-white mx-2 text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
+                    class="text-white text-sm brightness-50 tracking-[1.5px] group-hover:text-danger group-hover:brightness-125 transition duration-200"
                     >Github</span
                   ></a
                 >
