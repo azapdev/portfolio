@@ -62,6 +62,11 @@ window.onload = () => {
 let togglebtn = document.querySelector("#toggle");
 let navlist = document.querySelector("#nav-list");
 let apper = true;
+if (window.innerWidth < 768) {
+  navlist.style.display = "none";
+} else if (window.innerWidth >= 768) {
+  navlist.style.display = "block";
+}
 togglebtn.addEventListener("click", () => {
   if (apper) {
     navlist.style.display = "block";
@@ -76,4 +81,5 @@ togglebtn.addEventListener("click", () => {
     togglebtn.style.transform = "translateX(0px)";
   }
 });
+
 console.log(togglebtn);
