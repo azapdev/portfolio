@@ -74,7 +74,7 @@ togglebtn.addEventListener("click", () => {
     navlist.style.opacity = "0";
 
     apper = !apper;
-    togglebtn.style.transform = "translateX(10px)";
+    togglebtn.style.transform = "translateX(0px)";
   }
 });
 console.log(togglebtn);
