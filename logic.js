@@ -70,14 +70,24 @@ if (window.innerWidth < 768) {
 togglebtn.addEventListener("click", () => {
   if (apper) {
     navlist.style.display = "block";
-    navlist.style.opacity = "1";
-    togglebtn.style.transform = "translateX(-50px)";
+
+    togglebtn.style.transform = "translateX(-75px)";
     togglebtn.style.transition = "transform 1s ease";
     apper = !apper;
   } else {
     navlist.style.display = "none";
-    navlist.style.opacity = "0";
     apper = !apper;
     togglebtn.style.transform = "translateX(0px)";
   }
+});
+// ===============================
+// ===============================
+lis.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    if (window.innerWidth < 768) {
+      navlist.style.display = "none";
+      apper = !apper;
+      togglebtn.style.transform = "translateX(0px)";
+    }
+  });
 });
