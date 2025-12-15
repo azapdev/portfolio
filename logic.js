@@ -4,7 +4,7 @@
 let preloader = document.querySelector(".preloader");
 setTimeout(function () {
   preloader.style.display = "none";
-}, 3000);
+}, 100);
 
 // ===============================
 // nav-list-toggle
@@ -55,3 +55,25 @@ window.onload = () => {
   typing();
 };
 // ===============================
+
+// ===============================
+// toogle menue
+// ===============================
+let togglebtn = document.querySelector("#toggle");
+let navlist = document.querySelector("#nav-list");
+let apper = true;
+togglebtn.addEventListener("click", () => {
+  if (apper) {
+    navlist.style.right = "0px";
+    togglebtn.style.zIndex = "9999";
+    togglebtn.style.position = "fixed";
+    togglebtn.style.right = "100px";
+    apper = !apper;
+  } else {
+    navlist.style.right = "-150px";
+    apper = !apper;
+    togglebtn.style.position = "fixed";
+    togglebtn.style.right = "50px";
+  }
+});
+console.log(togglebtn);
