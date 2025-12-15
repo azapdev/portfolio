@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="bg-ghost-white font-roboto max-w-screen">
+  <body class="bg-ghost-white font-roboto w-full overflow-x-hidden">
     <!-- PRELOADER -->
     <div
       class="preloader bg-black h-screen w-full top-0 fixed z-50 flex flex-col justify-center items-center animate-preloader-animation object-contain"
@@ -55,7 +55,7 @@
       <!-- toggle -->
       <div
         id="toggle"
-        class="flex flex-col gap-1 mx-4 md:hidden cursor-pointer transition-all duration-300"
+        class="flex flex-col gap-1 mx-4 md:hidden cursor-pointer transition-all duration-800 z-50"
       >
         <span class="h-1 w-8 rounded bg-danger text-danger"></span>
         <span class="h-1 w-8 rounded bg-danger text-danger"></span>
@@ -65,7 +65,7 @@
       <!-- nav area -->
       <nav
         id="nav-list"
-        class="text-white absolute right-[-150px] top-0 h-screen w-40 bg-black/60 transition-all duration-300 md:block md:static md:h-auto md:w-auto md:bg-transparent"
+        class="text-white absolute hidden opacity-0 right-0 top-0 h-screen w-40 bg-black/60 transition-all duration-1000 md:block md:static md:h-auto md:w-auto md:bg-transparent"
       >
         <ul
           class="nav-list list-none gap-8 h-full flex flex-col items-center justify-center md:flex-row"
@@ -261,7 +261,6 @@
     <!-- footer -->
     <footer id="contact">
       <section class="h-35 flex flex-col items-center bg-footer-bg py-4">
-        >
         <!-- return img -->
         <a href="#about">
           <img

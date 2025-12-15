@@ -64,16 +64,17 @@ let navlist = document.querySelector("#nav-list");
 let apper = true;
 togglebtn.addEventListener("click", () => {
   if (apper) {
-    navlist.style.right = "0px";
-    togglebtn.style.zIndex = "9999";
-    togglebtn.style.position = "fixed";
-    togglebtn.style.right = "100px";
+    navlist.style.display = "block";
+    navlist.style.opacity = "1";
+    togglebtn.style.transform = "translateX(-50px)";
+    togglebtn.style.transition = "transform 1s ease";
     apper = !apper;
   } else {
-    navlist.style.right = "-150px";
+    navlist.style.display = "hidden";
+    navlist.style.opacity = "0";
+
     apper = !apper;
-    togglebtn.style.position = "fixed";
-    togglebtn.style.right = "50px";
+    togglebtn.style.transform = "translateX(10px)";
   }
 });
 console.log(togglebtn);
