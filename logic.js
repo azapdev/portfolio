@@ -81,5 +81,3 @@ togglebtn.addEventListener("click", () => {
     togglebtn.style.transform = "translateX(0px)";
   }
 });
-
-console.log(togglebtn);
