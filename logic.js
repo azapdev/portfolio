@@ -70,9 +70,8 @@ togglebtn.addEventListener("click", () => {
     togglebtn.style.transition = "transform 1s ease";
     apper = !apper;
   } else {
-    navlist.style.display = "hidden";
+    navlist.style.display = "none";
     navlist.style.opacity = "0";
-
     apper = !apper;
     togglebtn.style.transform = "translateX(0px)";
   }
