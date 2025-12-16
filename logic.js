@@ -132,7 +132,7 @@ separetor.addEventListener("click", () => {
   frist.style.transform = "rotate(0deg) translate(0px, 0px)";
   last.style.transform = "rotate(0deg) translate(0px, 0px)";
   frist.style.transition = "transform 0.5s ease";
-  last.style.transition = "transform 0.5s ease";
+  last.style.transition = "transform 0.5s ease";``
 
   apper = !apper;
   togglebtn.style.transform = "translateX(0px)";
