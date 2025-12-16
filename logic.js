@@ -4,6 +4,7 @@
 let preloader = document.querySelector(".preloader");
 setTimeout(function () {
   preloader.style.display = "none";
+  document.body.style.overflow = "auto";
 }, 3000);
 
 // ===============================
@@ -61,6 +62,7 @@ window.onload = () => {
 // ===============================
 let togglebtn = document.querySelector("#toggle");
 let navlist = document.querySelector("#nav-list");
+let separetor = document.querySelector("#separetor");
 let apper = true;
 if (window.innerWidth < 768) {
   navlist.style.display = "none";
@@ -70,12 +72,15 @@ if (window.innerWidth < 768) {
 togglebtn.addEventListener("click", () => {
   if (apper) {
     navlist.style.display = "block";
-
+    separetor.style.display = "block";
+    separetor.style.zIndex = "39";
     togglebtn.style.transform = "translateX(-75px)";
     togglebtn.style.transition = "transform 1s ease";
     apper = !apper;
   } else {
     navlist.style.display = "none";
+    separetor.style.display = "none";
+    separetor.style.zIndex = "0";
     apper = !apper;
     togglebtn.style.transform = "translateX(0px)";
   }
@@ -86,8 +91,20 @@ lis.forEach((li) => {
   li.addEventListener("click", (e) => {
     if (window.innerWidth < 768) {
       navlist.style.display = "none";
+      separetor.style.display = "none";
+      separetor.style.zIndex = "0";
       apper = !apper;
       togglebtn.style.transform = "translateX(0px)";
     }
   });
+});
+
+// ===============================
+// ===============================
+separetor.addEventListener("click", () => {
+  navlist.style.display = "none";
+  separetor.style.display = "none";
+  separetor.style.zIndex = "0";
+  apper = !apper;
+  togglebtn.style.transform = "translateX(0px)";
 });
