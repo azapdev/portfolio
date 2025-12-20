@@ -67,11 +67,7 @@ let frist = document.querySelector("#frist");
 let middel = document.querySelector("#middel");
 let last = document.querySelector("#last");
 let apper = true;
-if (window.innerWidth < 768) {
-  navlist.style.display = "none";
-} else if (window.innerWidth >= 768) {
-  navlist.style.display = "block";
-}
+
 togglebtn.addEventListener("click", () => {
   if (apper) {
     navlist.style.display = "block";
@@ -100,6 +96,7 @@ togglebtn.addEventListener("click", () => {
     togglebtn.style.transform = "translateX(0px)";
   }
 });
+
 // ===============================
 // ===============================
 lis.forEach((li) => {
@@ -132,7 +129,7 @@ separetor.addEventListener("click", () => {
   frist.style.transform = "rotate(0deg) translate(0px, 0px)";
   last.style.transform = "rotate(0deg) translate(0px, 0px)";
   frist.style.transition = "transform 0.5s ease";
-  last.style.transition = "transform 0.5s ease";``
+  last.style.transition = "transform 0.5s ease";
 
   apper = !apper;
   togglebtn.style.transform = "translateX(0px)";
